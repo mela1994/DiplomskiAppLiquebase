@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+
+
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:ext="http://www.liquibase.org/xml/ns/dbchangelog-ext"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-2.0.xsd
+        http://www.liquibase.org/xml/ns/dbchangelog-ext http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-ext.xsd">
+    <changeSet id="8" author="nikola">
+        <loadData tableName="zvanje" file="C:\podaciZaBazu\zvanje.csv">
+            <column name="sifraZvanja" type="NUMERIC" />
+            <column name="nazivZvanja" type="STRING" />
+        </loadData> 
+        <loadData tableName="autor" file="C:\podaciZaBazu\autori.csv">
+            <column name="sifraAutora" type="NUMERIC" />
+            <column name="imeAutora" type="STRING" />
+            <column name="prezimeAutora" type="STRING" />
+        </loadData> 
+        <loadData tableName="izdavac" file="C:\podaciZaBazu\izdavac.csv">
+            <column name="sifraIzdavaca" type="NUMERIC" />
+            <column name="nazivIzdavaca" type="STRING" />
+        </loadData> 
+        <loadData tableName="katedra" file="C:\podaciZaBazu\katedre.csv">
+            <column name="sifraKatedre" type="NUMERIC" />
+            <column name="nazivKatedre" type="STRING" />
+        </loadData> 
+        <loadData tableName="literatura" file="C:\podaciZaBazu\literature.csv">
+            <column name="sifraKnjige" type="NUMERIC" />
+            <column name="nazivKnjige" type="STRING" />
+            <column name="izdanje" type="STRING" />
+            <column name="sifraIzdavaca" type="NUMERIC" />
+        </loadData> 
+        <loadData tableName="predmet" file="C:\podaciZaBazu\predmeti.csv">
+            <column name="sifraPredmeta" type="NUMERIC" />
+            <column name="nazivPredmeta" type="STRING" />
+            <column name="brojESPB" type="STRING" />
+            <column name="sifraKatedre" type="NUMERIC" />
+        </loadData> 
+        <loadData tableName="zaposleni" file="C:\podaciZaBazu\zaposleni.csv">
+            <column name="sifraZaposlenog" type="NUMERIC" />
+            <column name="ime" type="STRING" />
+            <column name="prezime" type="STRING" />
+            <column name="kontaktTelefon" type="STRING" />
+            <column name="brojTelefona" type="STRING" />
+            <column name="brojKabineta" type="STRING" />
+            <column name="email" type="STRING" />
+            <column name="korisnickoIme" type="STRING" />
+            <column name="korisnickaSifra" type="STRING" />
+            <column name="sifraZvanja" type="NUMERIC" />
+            <column name="sifraKatedre" type="NUMERIC" />
+        </loadData> 
+        <loadData tableName="uloga" file="C:\podaciZaBazu\uloga.csv">
+            <column name="rbr" type="NUMERIC" />
+            <column name="sifraPre" type="NUMERIC" />
+            <column name="sifraZap" type="NUMERIC" />
+            <column name="nazivUloge" type="STRING" />
+        </loadData> 
+        <loadData tableName="autorliteratura" file="C:\podaciZaBazu\autorliteratura.csv">
+            <column name="rbr" type="NUMERIC" />
+            <column name="sifraKnjige" type="NUMERIC" />
+            <column name="sifraAutora" type="NUMERIC" />
+        </loadData> 
+          <loadData tableName="skolskagodina" file="C:\podaciZaBazu\skolskagodina.csv">
+            <column name="rbr" type="NUMERIC" />
+            <column name="sifraKnjige" type="NUMERIC" />
+            <column name="sifraPredmeta" type="NUMERIC" />
+            <column name="skolskaGodina" type="STRING" />
+        </loadData> 
+        
+    </changeSet>   
+</databaseChangeLog>
